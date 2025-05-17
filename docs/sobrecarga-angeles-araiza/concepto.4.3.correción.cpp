@@ -19,8 +19,3 @@ public:
     }
 };
 
-int main() {
-    Contador cnt(7);
-    Contador old = cnt++;
-    cout << "Old: " << old.get() << ", New: " << cnt.get() << endl;
-}
