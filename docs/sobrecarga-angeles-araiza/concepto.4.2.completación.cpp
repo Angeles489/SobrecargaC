@@ -1,4 +1,4 @@
-// contador_inc.cpp
+// contador_inc_bug.cpp
 
 //Completación de código
 #include <iostream>
@@ -10,11 +10,12 @@ private:
 public:
     Contador(int v) : valor(v) {}
     Contador operator++(int) {
-        // COMPLETA: guarda copia, incrementa valor y devuelve copia
-        valor++;
-        return *this;
+        Contador actual = *this; //guarda copia  
+        valor++;                //incrementa valor
+        return actual;          // devuelve copia
     }
-    int get() const { return valor; }
+
+    int get() const {return valor;}
 };
 
 int main() {
